@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="L’Aune — un outil Révéla, par DSP Avocats. Avant d’agir, mesurer : ce qui est en jeu, qui peut payer pour vous, ce que coûte chaque voie, et ce qu’il resterait au bout." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#F7F3EA" />
+<title>L’Aune — mesurer avant d’agir · un outil Révéla</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpolyline points='13.00,13.00%2013.01,12.93%2013.04,12.86%2013.09,12.80%2013.15,12.76%2013.23,12.73%2013.32,12.71%2013.42,12.72%2013.52,12.76%2013.62,12.81%2013.71,12.89%2013.79,12.99%2013.86,13.11%2013.90,13.25%2013.92,13.40%2013.92,13.56%2013.89,13.73%2013.82,13.90%2013.73,14.07%2013.60,14.23%2013.44,14.37%2013.26,14.49%2013.05,14.58%2012.82,14.64%2012.57,14.67%2012.31,14.66%2012.05,14.61%2011.79,14.51%2011.53,14.38%2011.29,14.20%2011.08,13.98%2010.89,13.72%2010.74,13.43%2010.63,13.11%2010.57,12.77%2010.55,12.41%2010.59,12.05%2010.69,11.68%2010.84,11.33%2011.05,10.99%2011.31,10.67%2011.62,10.40%2011.98,10.16%2012.37,9.97%2012.80,9.84%2013.25,9.78%2013.72,9.77%2014.19,9.84%2014.66,9.98%2015.11,10.18%2015.54,10.46%2015.93,10.80%2016.28,11.20%2016.56,11.65%2016.79,12.15%2016.94,12.69%2017.02,13.25%2017.01,13.83%2016.92,14.41%2016.75,14.98%2016.49,15.53%2016.15,16.05%2015.73,16.52%2015.24,16.93%2014.69,17.28%2014.09,17.54%2013.45,17.72%2012.77,17.81%2012.08,17.80%2011.39,17.69%2010.72,17.48%2010.07,17.18%209.46,16.77%208.91,16.28%208.42,15.71%208.02,15.06%207.71,14.36%207.50,13.61%207.40,12.82%207.41,12.02%207.53,11.22%207.77,10.44%208.13,9.69%208.59,8.99%209.15,8.35%209.81,7.79%2010.55,7.33%2011.35,6.97%2012.21,6.72%2013.10,6.60%2014.01,6.61%2014.92,6.75%2015.82,7.02%2016.67,7.41%2017.47,7.93%2018.19,8.57%2018.83,9.30%2019.35,10.13%2019.76,11.03%2020.04,12.00%2020.19,13.00%2020.19,14.02%2020.04,15.05%2019.75,16.05%2019.31,17.01%2018.74,17.90%2018.04,18.71%2017.22,19.43%2016.31,20.02%2015.30,20.49%2014.24,20.81%2013.13,20.98%2011.99,20.99%2010.86,20.83%209.75,20.52%208.68,20.05%207.69,19.42%206.78,18.66%205.99,17.77%205.32,16.76%204.80,15.67%204.43,14.50%204.24,13.28%204.21,12.03%204.37,10.78%204.70,9.56%205.20,8.39%205.88,7.29%206.70,6.29%207.67,5.41%208.76,4.67%209.95,4.09%2011.22,3.68%2012.55,3.45%2013.91,3.41%2015.27,3.56%2016.60,3.91%2017.88,4.45%2019.08,5.16%2020.17,6.05%2021.14,7.09%2021.96,8.26%2022.60,9.54%2023.06,10.92%2023.33,12.35%2023.39,13.82%2023.24,15.29%2022.88,16.73%2022.32,18.12%2021.56,19.43%2020.62,20.62%2019.52,21.68%2018.26,22.57%2016.89,23.29%2015.41,23.80%2013.87,24.11%2012.30,24.19%2010.71,24.05%209.15,23.68%207.65,23.10%206.24,22.30' fill='none' stroke='%23B9924C' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+<style>
+:root { --paper:#F7F3EA; --sheet:#FBF8F1; --navy:#1B2A4A; --ink:#22283A; --gold:#B9924C; --gold-soft:#D8BC85; --line:#E3DACA; --muted:#6E6A5E;
+  --ok:#7FA36C; --mid:#C99A45; --hot:#C2584C;
+  --serif:"Cormorant Garamond", Garamond, "Times New Roman", serif; --sans:"DM Sans","Helvetica Neue",Arial,sans-serif;
+  color-scheme: light; }
+*,*::before,*::after { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+a { color:inherit; }
+button, input, select { font:inherit; color:inherit; }
+button { cursor:pointer; }
+[hidden] { display:none !important; }
+:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+.app { max-width:680px; margin:0 auto; padding:0 20px; min-height:100vh; display:flex; flex-direction:column; }
+header.top { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:18px 0; border-bottom:1px solid var(--line); }
+.brand { display:inline-flex; align-items:center; gap:9px; color:var(--navy); text-decoration:none; }
+.brand svg { color:var(--gold); flex:none; }
+.brand span { font-family:var(--serif); font-size:22px; font-weight:600; letter-spacing:.08em; }
+nav.tabs { display:flex; gap:4px; }
+nav.tabs button { border:none; background:none; font-size:13.5px; color:var(--muted); padding:6px 8px; border-radius:8px; }
+nav.tabs button[aria-current="true"] { color:var(--navy); background:rgba(27,42,74,.07); font-weight:600; }
+main { flex:1; padding:28px 0 12px; }
+.screen { display:none; }
+.screen.on { display:block; animation:in .35s ease both; }
+@keyframes in { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+@media (prefers-reduced-motion: reduce) { .screen.on { animation:none; } }
+.kicker { font-size:12.5px; font-weight:600; color:var(--gold); letter-spacing:.06em; text-transform:uppercase; margin:0 0 10px; }
+h1 { font-family:var(--serif); font-weight:500; color:var(--navy); font-size:clamp(40px,9vw,58px); line-height:1.02; margin:0 0 18px; letter-spacing:-.01em; }
+h1 em { font-style:italic; font-weight:400; color:var(--gold); }
+h2 { font-family:var(--serif); font-weight:600; color:var(--navy); font-size:clamp(27px,6vw,34px); line-height:1.12; margin:0 0 10px; }
+h3 { font-family:var(--serif); font-weight:600; color:var(--navy); font-size:22px; line-height:1.2; margin:0 0 6px; }
+.lede { font-family:var(--serif); font-size:clamp(20px,4.6vw,23px); line-height:1.45; margin:0 0 22px; }
+.muted { color:var(--muted); }
+.small { font-size:14px; }
+p { margin:0 0 14px; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:1px solid var(--navy); background:transparent; border-radius:999px; padding:13px 24px; font-size:15.5px; font-weight:500; text-decoration:none; color:var(--navy); min-height:48px; }
+.btn.main { background:var(--navy); color:var(--sheet); }
+.btn.main:hover { background:#2A3D63; }
+.btn.main:disabled { background:#A7ADBA; border-color:#A7ADBA; cursor:not-allowed; }
+.btn.ghost:hover { background:rgba(27,42,74,.06); }
+.btn.sm { padding:8px 14px; min-height:36px; font-size:14px; }
+.btn.link { border:none; padding:8px 0; min-height:0; color:var(--muted); text-decoration:underline; text-underline-offset:3px; background:none; }
+.row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+.panel { background:var(--sheet); border:1px solid var(--line); border-radius:16px; padding:20px; margin:0 0 16px; }
+.duo { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0 24px; }
+@media (max-width:560px) { .duo { grid-template-columns:1fr; } }
+.duo .panel { margin:0; }
+.duo h3 { font-size:20px; }
+.duo p { font-size:15px; margin:0; }
+.tag { display:inline-block; font-size:12.5px; font-weight:600; border-radius:999px; padding:3px 11px; color:#fff; background:var(--c,var(--navy)); }
+.tag.legal { --c:var(--navy); } .tag.lettre { --c:var(--gold); }
+
+/* Choix */
+.choices { display:grid; gap:10px; margin:0 0 20px; }
+.choice { display:block; width:100%; text-align:left; border:1px solid var(--line); background:var(--sheet); border-radius:14px; padding:16px 18px; min-height:58px; }
+.choice:hover { border-color:var(--gold); }
+.choice strong { display:block; font-weight:600; font-size:16.5px; color:var(--navy); }
+.choice span { display:block; font-size:14px; color:var(--muted); margin-top:2px; }
+.step-q { font-family:var(--serif); font-size:clamp(25px,5.8vw,31px); line-height:1.2; color:var(--navy); margin:0 0 18px; }
+
+/* Formulaire */
+label.f { display:block; margin:0 0 16px; }
+label.f > span { display:block; font-size:14.5px; font-weight:500; color:var(--navy); margin-bottom:5px; }
+label.f small { display:block; font-size:13px; color:var(--muted); margin-top:4px; }
+input[type=text], input[type=date], input[type=number], select { width:100%; border:1px solid var(--line); background:#fff; border-radius:10px; padding:11px 12px; font-size:16px; }
+input:focus, select:focus { outline:2px solid var(--gold-soft); border-color:var(--gold); }
+.dur { display:grid; grid-template-columns:110px 1fr; gap:10px; }
+.check { display:flex; gap:10px; align-items:flex-start; font-size:15px; margin:0 0 14px; cursor:pointer; }
+.check input { width:20px; height:20px; margin-top:2px; accent-color:var(--navy); flex:none; }
+.note { border-left:3px solid var(--gold); padding:4px 0 4px 14px; margin:0 0 18px; font-size:15px; }
+.note.hot { border-color:var(--hot); }
+
+/* Résultat du calcul */
+.result { border-radius:18px; padding:22px; margin:6px 0 18px; background:var(--navy); color:#F7F3EA; }
+.result .kicker { color:var(--gold-soft); margin-bottom:4px; }
+.result .big { font-family:var(--serif); font-size:clamp(30px,7vw,40px); line-height:1.1; font-weight:600; margin:0 0 6px; }
+.result .left { font-size:15px; color:#D3D7E0; margin:0; }
+.result .left strong { color:#fff; }
+.result.past { background:#6A2018; }
+.steps { list-style:none; padding:0; margin:0; counter-reset:s; }
+.steps li { counter-increment:s; position:relative; padding:0 0 12px 34px; font-size:15px; }
+.steps li::before { content:counter(s); position:absolute; left:0; top:0; width:24px; height:24px; border-radius:50%; border:1.5px solid var(--gold); color:var(--gold); font-size:13px; font-weight:600; display:flex; align-items:center; justify-content:center; }
+.steps li a { font-size:13px; color:var(--navy); }
+.safety { background:#FFF7E6; border:1px solid var(--gold-soft); border-radius:14px; padding:14px 16px; font-size:15px; margin:0 0 18px; }
+
+/* Relevé */
+.item { display:grid; grid-template-columns:auto 1fr; gap:4px 16px; align-items:start; background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px 18px; margin:0 0 12px; }
+.item .cd { grid-row:span 3; text-align:center; min-width:74px; border-radius:12px; padding:8px 6px; background:var(--c); color:#fff; }
+.item .cd strong { display:block; font-family:var(--serif); font-size:30px; line-height:1; }
+.item .cd span { font-size:11.5px; }
+.item h3 { font-size:20px; margin:0; }
+.item .when { font-size:14.5px; margin:0; }
+.item .acts { display:flex; gap:12px; flex-wrap:wrap; }
+.empty { text-align:center; color:var(--muted); padding:30px 10px; }
+
+/* Repères */
+table.ref { width:100%; border-collapse:collapse; font-size:15px; margin:0 0 6px; }
+table.ref th { text-align:left; font-size:12.5px; color:var(--muted); font-weight:600; border-bottom:1px solid var(--line); padding:8px 8px 8px 0; }
+table.ref td { border-bottom:1px solid var(--line); padding:10px 8px 10px 0; vertical-align:top; }
+table.ref td.d { font-weight:600; color:var(--navy); white-space:nowrap; }
+table.ref a { font-size:13px; color:var(--navy); }
+@media (max-width:520px) { table.ref, table.ref tbody, table.ref tr, table.ref td { display:block; } table.ref thead { display:none; } table.ref tr { border-bottom:1px solid var(--line); padding:10px 0; } table.ref td { border:none; padding:2px 0; } }
+
+.cta { background:var(--navy); color:#F7F3EA; border-radius:18px; padding:24px 22px; margin:26px 0 16px; }
+.cta h3 { color:#F7F3EA; }
+.cta p { color:#D3D7E0; font-size:15px; }
+.cta .btn { background:var(--gold); border-color:var(--gold); color:var(--navy); font-weight:600; }
+.warn { font-size:13.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:14px; margin-top:20px; }
+.next-links a { font-weight:600; color:var(--navy); }
+footer.foot { border-top:1px solid var(--line); padding:22px 0 34px; font-size:13.5px; color:var(--muted); }
+footer.foot .sig { font-family:var(--serif); font-style:italic; font-size:19px; color:var(--navy); margin:0 0 8px; }
+footer.foot p { margin:0 0 6px; }
+details.mentions { margin-top:10px; }
+details.mentions summary { cursor:pointer; color:var(--navy); font-weight:500; }
+details.mentions h4 { font-family:var(--serif); font-size:18px; color:var(--navy); margin:16px 0 4px; }
+details.mentions p { font-size:13.5px; }
+.print-only { display:none; }
+@media print {
+  @page { margin:16mm 14mm; }
+  body { background:#fff; font-size:11.5pt; }
+  .no-print, header.top, details.mentions, .item .acts { display:none !important; }
+  .print-only { display:block; }
+  .app { max-width:none; padding:0; }
+  .screen { display:none !important; }
+  .screen.on { display:block !important; animation:none; }
+  .item, .panel { break-inside:avoid; }
+  .item .cd, .result { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+.skip{position:absolute;left:-9999px;top:8px;z-index:30;background:var(--navy);color:#fff;padding:8px 16px;border-radius:999px;font-size:14px;text-decoration:none}.skip:focus{left:12px}
+
+/* Spécifique à L'Aune */
+.progress { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+.bar { flex:1; height:4px; background:var(--line); border-radius:4px; overflow:hidden; }
+.bar i { display:block; height:100%; background:var(--gold); transition:width .3s; }
+.count { font-size:13.5px; color:var(--muted); white-space:nowrap; }
+.seg { display:flex; flex-wrap:wrap; gap:8px; }
+.seg button { border:1px solid var(--line); background:var(--sheet); border-radius:999px; padding:9px 15px; font-size:15px; min-height:42px; }
+.seg button[aria-pressed="true"] { background:var(--navy); border-color:var(--navy); color:var(--sheet); }
+.money { position:relative; }
+.money input { padding-right:34px; }
+.money::after { content:"€"; position:absolute; right:12px; top:50%; transform:translateY(-50%); color:var(--muted); }
+.verdict { border-radius:16px; padding:18px 20px; margin:6px 0 16px; color:#fff; background:var(--c,var(--navy)); }
+.verdict strong { font-family:var(--serif); font-size:26px; display:block; line-height:1.15; margin-bottom:4px; }
+.verdict p { margin:0; font-size:15px; color:rgba(255,255,255,.88); }
+.ways { display:grid; gap:12px; }
+.way { background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; }
+.way header { display:flex; justify-content:space-between; gap:10px; align-items:baseline; flex-wrap:wrap; margin-bottom:6px; }
+.way h3 { font-size:21px; margin:0; }
+.cost { font-size:12.5px; font-weight:600; border-radius:999px; padding:3px 11px; background:var(--c); color:#fff; white-space:nowrap; }
+.way ul { margin:6px 0 0; padding-left:18px; font-size:15px; }
+.way li { margin-bottom:5px; }
+.way .src { font-size:13px; }
+.way .src a { color:var(--navy); }
+.balance { margin:8px 0 18px; }
+.bal-row { display:grid; grid-template-columns:120px 1fr auto; gap:10px; align-items:center; margin:0 0 10px; font-size:14.5px; }
+.bal-row .track { height:22px; background:#EFE8DA; border-radius:6px; overflow:hidden; }
+.bal-row .track i { display:block; height:100%; border-radius:6px; background:var(--c); }
+.bal-row b { font-variant-numeric:tabular-nums; }
+@media (max-width:480px) { .bal-row { grid-template-columns:1fr auto; } .bal-row .track { grid-column:1 / -1; order:3; } }
+.big-num { font-family:var(--serif); font-size:clamp(30px,7vw,40px); font-weight:600; color:var(--navy); line-height:1.1; margin:0 0 4px; }
+.sum dl { display:grid; grid-template-columns:minmax(0,42%) 1fr; gap:8px 16px; margin:8px 0 0; font-size:15px; }
+.sum dt { color:var(--muted); }
+.sum dd { margin:0; font-weight:500; }
+@media (max-width:480px) { .sum dl { grid-template-columns:1fr; gap:2px; } .sum dd { margin-bottom:8px; } }
+.qlist { margin:0; padding-left:20px; }
+.qlist li { margin-bottom:8px; }
+.law { border-top:1px solid var(--line); padding:12px 0; }
+.law:first-child { border-top:none; padding-top:0; }
+.law p { margin:0 0 4px; font-size:15px; }
+.law a { font-size:13.5px; color:var(--navy); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="app">
+<header class="top">
+  <a class="brand" href="https://dsp-avocats.fr/" aria-label="Révéla, par DSP Avocats"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><polyline points="13.00,13.00 13.01,12.93 13.04,12.86 13.09,12.80 13.15,12.76 13.23,12.73 13.32,12.71 13.42,12.72 13.52,12.76 13.62,12.81 13.71,12.89 13.79,12.99 13.86,13.11 13.90,13.25 13.92,13.40 13.92,13.56 13.89,13.73 13.82,13.90 13.73,14.07 13.60,14.23 13.44,14.37 13.26,14.49 13.05,14.58 12.82,14.64 12.57,14.67 12.31,14.66 12.05,14.61 11.79,14.51 11.53,14.38 11.29,14.20 11.08,13.98 10.89,13.72 10.74,13.43 10.63,13.11 10.57,12.77 10.55,12.41 10.59,12.05 10.69,11.68 10.84,11.33 11.05,10.99 11.31,10.67 11.62,10.40 11.98,10.16 12.37,9.97 12.80,9.84 13.25,9.78 13.72,9.77 14.19,9.84 14.66,9.98 15.11,10.18 15.54,10.46 15.93,10.80 16.28,11.20 16.56,11.65 16.79,12.15 16.94,12.69 17.02,13.25 17.01,13.83 16.92,14.41 16.75,14.98 16.49,15.53 16.15,16.05 15.73,16.52 15.24,16.93 14.69,17.28 14.09,17.54 13.45,17.72 12.77,17.81 12.08,17.80 11.39,17.69 10.72,17.48 10.07,17.18 9.46,16.77 8.91,16.28 8.42,15.71 8.02,15.06 7.71,14.36 7.50,13.61 7.40,12.82 7.41,12.02 7.53,11.22 7.77,10.44 8.13,9.69 8.59,8.99 9.15,8.35 9.81,7.79 10.55,7.33 11.35,6.97 12.21,6.72 13.10,6.60 14.01,6.61 14.92,6.75 15.82,7.02 16.67,7.41 17.47,7.93 18.19,8.57 18.83,9.30 19.35,10.13 19.76,11.03 20.04,12.00 20.19,13.00 20.19,14.02 20.04,15.05 19.75,16.05 19.31,17.01 18.74,17.90 18.04,18.71 17.22,19.43 16.31,20.02 15.30,20.49 14.24,20.81 13.13,20.98 11.99,20.99 10.86,20.83 9.75,20.52 8.68,20.05 7.69,19.42 6.78,18.66 5.99,17.77 5.32,16.76 4.80,15.67 4.43,14.50 4.24,13.28 4.21,12.03 4.37,10.78 4.70,9.56 5.20,8.39 5.88,7.29 6.70,6.29 7.67,5.41 8.76,4.67 9.95,4.09 11.22,3.68 12.55,3.45 13.91,3.41 15.27,3.56 16.60,3.91 17.88,4.45 19.08,5.16 20.17,6.05 21.14,7.09 21.96,8.26 22.60,9.54 23.06,10.92 23.33,12.35 23.39,13.82 23.24,15.29 22.88,16.73 22.32,18.12 21.56,19.43 20.62,20.62 19.52,21.68 18.26,22.57 16.89,23.29 15.41,23.80 13.87,24.11 12.30,24.19 10.71,24.05 9.15,23.68 7.65,23.10 6.24,22.30" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span>Révéla</span></a>
+  <span class="small muted">L’Aune</span>
+</header>
+
+<main id="main">
+<!-- Accueil -->
+<section class="screen on" id="s-intro" aria-labelledby="t-intro">
+  <p class="kicker">Un outil Révéla · Comprendre</p>
+  <h1 id="t-intro">L’Aune<br><em>mesurer avant d’agir</em></h1>
+  <p class="lede">Aller au tribunal a un prix, et il ne se résume pas aux honoraires. Avant de choisir une voie, il faut la mesurer à ce qui est en jeu.</p>
+  <p class="muted">En quatre étapes, L’Aune vous aide à poser les chiffres : ce que vous réclamez ou ce qu’on vous réclame, qui peut payer pour vous (votre assurance, l’aide juridictionnelle), ce que coûte chaque voie, de la conciliation gratuite au procès, et ce qu’il vous resterait au bout.</p>
+  <div class="facts" aria-label="En bref"><div><strong>4</strong><span>étapes</span></div><div><strong>2026</strong><span>plafonds de l’aide juridictionnelle</span></div><div><strong>0</strong><span>donnée transmise</span></div></div>
+  <div class="row"><button class="btn main" id="btn-start">Commencer</button><button class="btn link" id="btn-last" hidden>Voir ma dernière mesure</button></div>
+  <p class="small muted" style="margin-top:22px">Vos chiffres restent sur cet appareil. L’Aune donne des repères généraux et une estimation indicative de l’éligibilité à l’aide juridictionnelle ; seul le bureau d’aide juridictionnelle décide. Elle n’indique aucun montant d’honoraires : demandez une convention d’honoraires écrite.</p>
+</section>
+
+<!-- Étape 1 : l'enjeu -->
+<section class="screen" id="s-e1" aria-labelledby="t-e1">
+  <div class="progress"><div class="bar"><i style="width:25%"></i></div><span class="count">Étape 1 sur 4</span></div>
+  <p class="kicker">L’enjeu</p>
+  <h2 id="t-e1">Qu’est-ce qui est en jeu ?</h2>
+  <div class="panel">
+    <label class="f"><span>Dans ce conflit…</span><div class="seg" data-k="sens"><button data-v="reclame">Je réclame quelque chose</button><button data-v="reclamee">On me réclame quelque chose</button></div></label>
+    <label class="f" for="in-enjeu"><span>Somme en jeu</span><div class="money"><input type="text" inputmode="decimal" id="in-enjeu" placeholder="Par exemple : 4 200" /></div><small>Si l’enjeu n’est pas une somme (des travaux à terminer, un bien à rendre), estimez sa valeur.</small></label>
+  </div>
+  <div class="row"><button class="btn main" data-next="e2">Continuer</button><button class="btn link" data-go="intro">Retour</button></div>
+</section>
+
+<!-- Étape 2 : qui peut payer -->
+<section class="screen" id="s-e2" aria-labelledby="t-e2">
+  <div class="progress"><div class="bar"><i style="width:50%"></i></div><span class="count">Étape 2 sur 4</span></div>
+  <p class="kicker">Qui peut payer pour vous ?</p>
+  <h2 id="t-e2">Avant de payer, vérifiez qui peut prendre en charge</h2>
+  <h3 style="margin-top:20px">1. Votre assurance de protection juridique</h3>
+  <p class="muted small">Elle se cache souvent dans un contrat que vous avez déjà : assurance habitation, automobile, carte bancaire, contrat de travail ou mutuelle. Elle peut prendre en charge des frais de procédure, et parfois une solution amiable.</p>
+  <div class="panel"><label class="f" style="margin:0"><span>Avez-vous une protection juridique ?</span><div class="seg" data-k="pj"><button data-v="oui">Oui</button><button data-v="non">Non</button><button data-v="nsp">Je ne sais pas</button></div></label></div>
+  <div class="note" id="pj-note" hidden></div>
+
+  <h3 style="margin-top:26px">2. L’aide juridictionnelle</h3>
+  <p class="muted small">L’État prend en charge tout ou partie des frais de justice, selon vos ressources. Les chiffres demandés figurent sur votre dernier avis d’imposition.</p>
+  <div class="panel">
+    <label class="f" for="in-foyer"><span>Nombre de personnes dans votre foyer fiscal</span><select id="in-foyer"><option value="1">1 personne</option><option value="2">2 personnes</option><option value="3">3 personnes</option><option value="4">4 personnes</option><option value="5">5 personnes</option><option value="6">6 personnes</option><option value="7">7 personnes</option><option value="8">8 personnes ou plus</option></select></label>
+    <label class="f" for="in-rfr"><span>Revenu fiscal de référence</span><div class="money"><input type="text" inputmode="decimal" id="in-rfr" /></div><small>Il figure en première page de votre avis d’imposition.</small></label>
+    <label class="f" for="in-mob"><span>Épargne et placements</span><div class="money"><input type="text" inputmode="decimal" id="in-mob" /></div><small>Comptes d’épargne, livrets, valeurs mobilières : une estimation suffit.</small></label>
+    <label class="f" for="in-immo" style="margin:0"><span>Biens immobiliers, hors résidence principale</span><div class="money"><input type="text" inputmode="decimal" id="in-immo" /></div></label>
+  </div>
+  <div id="aj-out" aria-live="polite"></div>
+  <div class="row"><button class="btn main" data-next="e3">Continuer</button><button class="btn link" data-go="e1">Retour</button></div>
+</section>
+
+<!-- Étape 3 : les voies -->
+<section class="screen" id="s-e3" aria-labelledby="t-e3">
+  <div class="progress"><div class="bar"><i style="width:75%"></i></div><span class="count">Étape 3 sur 4</span></div>
+  <p class="kicker">Les voies possibles</p>
+  <h2 id="t-e3">Ce que coûte chaque voie</h2>
+  <p class="muted">De la moins coûteuse à la plus coûteuse. Les montants d’honoraires sont libres : ils se fixent avec chaque professionnel. Ce qui suit, ce sont les postes de coût, pas des prix.</p>
+  <div class="note" id="note-750" hidden></div>
+  <div class="ways" id="ways"></div>
+  <div class="row" style="margin-top:20px"><button class="btn main" data-next="e4">Continuer</button><button class="btn link" data-go="e2">Retour</button></div>
+</section>
+
+<!-- Étape 4 : la balance -->
+<section class="screen" id="s-e4" aria-labelledby="t-e4">
+  <div class="progress"><div class="bar"><i style="width:100%"></i></div><span class="count">Étape 4 sur 4</span></div>
+  <p class="kicker">Ma balance</p>
+  <h2 id="t-e4">Ce qu’il resterait au bout</h2>
+  <p class="muted">Saisissez vos propres estimations, par exemple celles d’une convention d’honoraires. Laissez vide ce que vous ne connaissez pas encore.</p>
+  <div class="panel">
+    <label class="f" for="in-frais"><span>Ce que la procédure me coûterait</span><div class="money"><input type="text" inputmode="decimal" id="in-frais" /></div><small>Honoraires, frais de commissaire de justice, contribution de 50 €… déduction faite de ce que prendrait en charge votre assurance ou l’aide juridictionnelle.</small></label>
+    <label class="f" for="in-risque"><span>Ce que je pourrais devoir à l’autre si je perds</span><div class="money"><input type="text" inputmode="decimal" id="in-risque" /></div><small>Ses dépens et la somme que le juge pourrait vous condamner à lui verser pour ses frais (art. 700). Une estimation suffit.</small></label>
+    <label class="f" for="in-heures" style="margin:0"><span>Le temps que j’y consacrerais</span><input type="text" inputmode="numeric" id="in-heures" placeholder="En heures, par exemple : 20" /><small>Rendez-vous, recherches, audiences, documents. Ce temps ne se rembourse pas.</small></label>
+  </div>
+  <div id="bal-out" aria-live="polite"></div>
+  <div class="row"><button class="btn main" id="btn-sum">Voir ma mesure</button><button class="btn link" data-go="e3">Retour</button></div>
+</section>
+
+<!-- Synthèse -->
+<section class="screen" id="s-sum" aria-labelledby="t-sum">
+  <div class="print-only"><p class="kicker">Révéla · L’Aune</p></div>
+  <p class="kicker no-print">Ma mesure</p>
+  <h2 id="t-sum">Avant d’agir, la mesure de mon conflit</h2>
+  <p class="small muted" id="sum-date"></p>
+  <div class="panel sum"><dl id="sum-dl"></dl></div>
+  <div id="sum-bal"></div>
+  <div class="panel"><h3 style="font-size:20px">Mes questions à poser</h3><ul class="qlist" id="sum-q"></ul></div>
+  <div class="panel"><h3 style="font-size:20px">Références</h3><div id="sum-law"></div></div>
+  <p class="next-links small" id="sum-links"></p>
+  <div class="cta no-print">
+    <h3>Le bilan amiable gratuit</h3>
+    <p>Cinquante questions, sur papier, pour examiner votre situation et les voies amiables possibles, avant d’engager le moindre frais. Sans engagement.</p>
+    <a class="btn" href="mailto:contact@dsp-avocats.fr?subject=Bilan%20amiable%20gratuit%20%E2%80%94%20L%E2%80%99Aune">Demander mon bilan amiable gratuit</a>
+  </div>
+  <div class="row no-print"><button class="btn main" id="btn-print">Imprimer ou enregistrer en PDF</button><button class="btn ghost" data-go="e1">Modifier</button></div>
+  <p class="warn">L’Aune donne des repères généraux. L’estimation de l’aide juridictionnelle applique les plafonds 2026 de la métropole (circulaire du 16 janvier 2026) aux chiffres que vous avez saisis : seul le bureau d’aide juridictionnelle se prononce. Aucun montant d’honoraires n’est indiqué : ils se fixent librement, par une convention écrite.</p>
+</section>
+</main>
+
+<footer class="foot">
+  <p class="sig">Le droit existe lorsqu’on le révèle.</p>
+  <p>Révéla, par SELARL DSP Avocats, société d’avocats inscrite au Barreau de Nice. 8 bis rue Andrioli, Le Capitole V, 06000 Nice. <a href="mailto:contact@dsp-avocats.fr">contact@dsp-avocats.fr</a></p>
+  <p class="no-print"><button class="btn link" id="btn-erase" style="font-size:13.5px">Effacer mes données de cet appareil</button></p>
+  <details class="mentions" id="mentions-legales">
+    <summary>Mentions légales et confidentialité</summary>
+    <h4>Éditeur</h4>
+    <p>L’Aune est éditée par la SELARL DSP Avocats, société d’avocats inscrite au Barreau de Nice, au capital de 402 euros, SIREN 978 376 234. Siège : 8 bis rue Andrioli, Le Capitole V, 06000 Nice. Téléphone : 04 93 97 66 66. Courriel : contact@dsp-avocats.fr.</p>
+    <h4>Directeur de la publication</h4>
+    <p>SELARL DSP Avocats, représentée par ses cogérants, Lucas Panicucci et Claire Delmasse Simoni.</p>
+    <h4>Hébergement</h4>
+    <p>Vercel Inc., 440 North Barranca Avenue, Suite 4133, Covina, Californie 91723, États-Unis. vercel.com.</p>
+    <h4>Confidentialité</h4>
+    <p>L’Aune fonctionne entièrement dans votre navigateur. Vos chiffres, y compris vos ressources, sont enregistrés uniquement dans le stockage local de votre appareil. Rien n’est transmis au cabinet. Le site n’utilise ni cookie publicitaire ni outil de mesure d’audience. Le bouton « Effacer mes données » supprime tout.</p>
+    <p>Si vous écrivez au cabinet, les informations que vous transmettez sont traitées par la SELARL DSP Avocats pour répondre à votre demande. Elles sont couvertes par le secret professionnel de l’avocat. Vous pouvez demander à tout moment l’accès à vos données, leur rectification ou leur suppression, à contact@dsp-avocats.fr.</p>
+    <h4>Nature de l’outil</h4>
+    <p>L’Aune est un outil pédagogique. Elle présente des repères généraux vérifiés sur Légifrance et auprès des sources officielles à la date de publication. L’estimation de l’éligibilité à l’aide juridictionnelle est indicative. L’outil ne constitue pas une consultation juridique et ne remplace pas l’analyse personnalisée d’un avocat.</p>
+    <h4>Propriété intellectuelle</h4>
+    <p>Les textes, visuels et outils du site sont la propriété de la SELARL DSP Avocats. Toute reproduction sans autorisation est interdite.</p>
+  </details>
+</footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var LIENS = { vigie: "", cap: "", sentinelle: "" };   /* à renseigner au fil des mises en ligne */
+  var KEY = "revela-aune-v1";
+  function L(id) { return "https://www.legifrance.gouv.fr/codes/article_lc/" + id; }
+  function LO(id) { return "https://www.legifrance.gouv.fr/loda/article_lc/" + id; }
+  var REF = {
+    aj2:   ["Article 2 de la loi n° 91-647 du 10 juillet 1991", LO("LEGIARTI000006491176"), "L’aide juridictionnelle, totale ou partielle, bénéficie aux personnes dont les ressources sont insuffisantes. Elle n’est pas accordée lorsque les frais sont pris en charge par une assurance de protection juridique."],
+    aj4:   ["Article 4 de la loi n° 91-647 du 10 juillet 1991", LO("LEGIARTI000042915699"), "Les ressources s’apprécient selon le revenu fiscal de référence, le patrimoine mobilier et immobilier, et la composition du foyer fiscal."],
+    circ:  ["Circulaire du 16 janvier 2026 (NOR JUST2601659C)", "https://www.justice.gouv.fr/sites/default/files/2026-01/JUST2601659C.pdf", "Plafonds de ressources de l’aide juridictionnelle applicables en 2026."],
+    pj:    ["Article L. 127-1 du Code des assurances", L("LEGIARTI000006792738"), "L’assurance de protection juridique prend en charge des frais de procédure ou fournit des services en cas de litige, y compris pour obtenir réparation à l’amiable."],
+    conc:  ["Article 1er du décret n° 78-381 du 20 mars 1978", LO("LEGIARTI000037549646"), "Les fonctions de conciliateur de justice sont exercées à titre bénévole."],
+    cgi:   ["Article 1635 bis Q du Code général des impôts", L("LEGIARTI000054373093"), "Une contribution pour l’aide juridique de 50 € est due par la partie qui introduit une instance civile devant le tribunal judiciaire, sauf exceptions, notamment pour les bénéficiaires de l’aide juridictionnelle et l’injonction de payer."],
+    hon:   ["Article 10 de la loi n° 71-1130 du 31 décembre 1971", LO("LEGIARTI000054616333"), "Les honoraires sont fixés en accord avec le client. Sauf exceptions, l’avocat conclut par écrit une convention d’honoraires qui précise leur montant ou leur mode de calcul, et les frais envisagés."],
+    dep:   ["Article 695 du Code de procédure civile", L("LEGIARTI000047053198"), "Les dépens comprennent notamment les droits et taxes, les émoluments des officiers publics ou ministériels et la rémunération réglementée des avocats, mais pas leurs honoraires libres."],
+    a696:  ["Article 696 du Code de procédure civile", L("LEGIARTI000042941174"), "La partie perdante est condamnée aux dépens, sauf décision motivée du juge."],
+    a700:  ["Article 700 du Code de procédure civile", L("LEGIARTI000045268436"), "Le juge condamne la partie perdante à verser à l’autre la somme qu’il détermine au titre de ses frais non compris dans les dépens, en tenant compte de l’équité et de la situation économique de la partie condamnée."],
+    a7501: ["Article 750-1 du Code de procédure civile", L("LEGIARTI000047539064"), "Pour une somme de 5 000 € au plus ou un trouble anormal de voisinage, une tentative de conciliation, de médiation ou de procédure participative doit en principe précéder la saisine du tribunal judiciaire."]
+  };
+  var VERIF = "Références vérifiées le 9 octobre 2026.";
+
+  /* Plafonds 2026, métropole (circulaire du 16 janvier 2026) : [AJ totale, fin 55 %, fin 25 %, patrimoine mobilier, patrimoine immobilier] */
+  var PLAF = {
+    1: [12957, 15316, 19433, 12957, 38866], 2: [15289, 17648, 21765, 15289, 45861], 3: [17621, 19980, 24097, 17621, 52857],
+    4: [19095, 21454, 25570, 19095, 57276], 5: [20568, 22927, 27044, 20568, 61695], 6: [22041, 24400, 28517, 22041, 66114],
+    7: [23514, 25873, 29990, 23514, 70533]
+  };
+  var SUPP = 1473; /* majoration par personne au-delà de sept */
+
+  function aj(foyer, rfr, mob, immo) {
+    if (rfr === null) return null;
+    var n = Math.max(1, foyer), p = PLAF[Math.min(n, 7)].slice();
+    if (n > 7) { var k = n - 7; p[0] += k * SUPP; p[1] += k * SUPP; p[2] += k * SUPP; }
+    if ((mob !== null && mob > p[3]) || (immo !== null && immo > p[4])) return { niv: "patrimoine", p: p };
+    if (rfr <= p[0]) return { niv: "totale", p: p };
+    if (rfr <= p[1]) return { niv: "55", p: p };
+    if (rfr <= p[2]) return { niv: "25", p: p };
+    return { niv: "non", p: p };
+  }
+
+  /* ---------- État ---------- */
+  var st = { sens: "", enjeu: "", pj: "", foyer: "1", rfr: "", mob: "", immo: "", frais: "", risque: "", heures: "", screen: "intro", done: false };
+  function load() { try { var r = localStorage.getItem(KEY); if (r) { var d = JSON.parse(r); if (d && typeof d === "object") st = Object.assign(st, d); } } catch (e) {} }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} }
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function num(v) { if (v == null) return null; var s = String(v).replace(/\s| | /g, "").replace(",", ".").replace(/€/g, ""); if (s === "") return null; var n = Number(s); return isFinite(n) && n >= 0 ? n : null; }
+  function eur(n) { return Math.round(n).toLocaleString("fr-FR") + " €"; }
+  function show(name, keep) {
+    ["intro", "e1", "e2", "e3", "e4", "sum"].forEach(function (n) { $("s-" + n).classList.toggle("on", n === name); });
+    if (!keep) { st.screen = name; save(); }
+    window.scrollTo(0, 0);
+  }
+  function go(name) { if (name === "e2") renderAJ(); if (name === "e3") renderWays(); if (name === "e4") renderBal(); if (name === "sum") renderSum(); syncInputs(); show(name); }
+
+  /* ---------- Saisie ---------- */
+  var FIELDS = { "in-enjeu": "enjeu", "in-rfr": "rfr", "in-mob": "mob", "in-immo": "immo", "in-frais": "frais", "in-risque": "risque", "in-heures": "heures", "in-foyer": "foyer" };
+  function syncInputs() {
+    Object.keys(FIELDS).forEach(function (id) { $(id).value = st[FIELDS[id]] || (id === "in-foyer" ? "1" : ""); });
+    document.querySelectorAll(".seg").forEach(function (g) { var k = g.getAttribute("data-k"); g.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(st[k] === b.getAttribute("data-v"))); }); });
+    renderPJ();
+  }
+  Object.keys(FIELDS).forEach(function (id) {
+    $(id).addEventListener("input", function () { st[FIELDS[id]] = this.value; save(); if (/rfr|mob|immo|foyer/.test(id)) renderAJ(); if (/frais|risque|heures/.test(id)) renderBal(); });
+    $(id).addEventListener("change", function () { st[FIELDS[id]] = this.value; save(); renderAJ(); });
+  });
+  document.querySelectorAll(".seg").forEach(function (g) {
+    g.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; e.preventDefault(); st[g.getAttribute("data-k")] = b.getAttribute("data-v"); save(); syncInputs(); });
+  });
+  document.querySelectorAll("[data-next]").forEach(function (b) { b.onclick = function () { go(b.getAttribute("data-next")); }; });
+  document.querySelectorAll("[data-go]").forEach(function (b) { b.onclick = function () { go(b.getAttribute("data-go")); }; });
+  $("btn-start").onclick = function () { go("e1"); };
+  $("btn-last").onclick = function () { go("sum"); };
+  $("btn-sum").onclick = function () { st.done = true; save(); go("sum"); };
+
+  /* ---------- Protection juridique ---------- */
+  function renderPJ() {
+    var n = $("pj-note");
+    if (!st.pj) { n.hidden = true; return; }
+    n.hidden = false;
+    n.innerHTML = st.pj === "oui"
+      ? "<strong>Déclarez le litige à votre assureur avant d’engager des frais.</strong> Lisez les conditions : plafonds de prise en charge, libre choix de l’avocat, prise en charge d’une solution amiable. Attention : lorsque votre assurance couvre ces frais, l’aide juridictionnelle n’est pas accordée."
+      : st.pj === "nsp"
+        ? "<strong>Vérifiez vos contrats :</strong> assurance habitation, automobile, carte bancaire, mutuelle, contrat de travail. Cherchez les mots « protection juridique » ou « défense recours ». Un appel à votre assureur suffit souvent à le savoir."
+        : "Sans protection juridique, l’aide juridictionnelle peut prendre le relais si vos ressources le permettent.";
+  }
+
+  /* ---------- Aide juridictionnelle ---------- */
+  function ajResult() { return aj(Number(st.foyer) || 1, num(st.rfr), num(st.mob), num(st.immo)); }
+  function ajText(r) {
+    if (!r) return null;
+    var p = r.p;
+    var T = {
+      totale: ["var(--ok)", "Aide juridictionnelle totale, a priori", "Votre revenu fiscal de référence ne dépasse pas " + eur(p[0]) + ". L’État prendrait en charge la totalité des frais couverts, et vous seriez dispensé de la contribution de 50 €."],
+      "55": ["var(--mid)", "Aide juridictionnelle partielle (55 %), a priori", "Votre revenu fiscal de référence se situe entre " + eur(p[0] + 1) + " et " + eur(p[1]) + ". L’État prendrait en charge 55 % ; une convention d’honoraires fixe le complément à votre charge."],
+      "25": ["var(--mid)", "Aide juridictionnelle partielle (25 %), a priori", "Votre revenu fiscal de référence se situe entre " + eur(p[1] + 1) + " et " + eur(p[2]) + ". L’État prendrait en charge 25 % ; une convention d’honoraires fixe le complément à votre charge."],
+      non: ["#6E6A5E", "Pas d’aide juridictionnelle, a priori", "Votre revenu fiscal de référence dépasse le plafond de l’aide partielle (" + eur(p[2]) + " pour votre foyer). Vérifiez d’autant plus votre protection juridique."],
+      patrimoine: ["#6E6A5E", "Pas d’aide juridictionnelle, a priori", "Votre patrimoine dépasse l’un des plafonds (" + eur(p[3]) + " d’épargne, " + eur(p[4]) + " de biens immobiliers hors résidence principale, pour votre foyer). Le dépassement d’un plafond de patrimoine exclut l’aide, totale ou partielle."]
+    }[r.niv];
+    return T;
+  }
+  function renderAJ() {
+    var r = ajResult(), out = $("aj-out");
+    if (!r) { out.innerHTML = '<p class="small muted">Saisissez votre revenu fiscal de référence pour obtenir une estimation.</p>'; return; }
+    var t = ajText(r);
+    out.innerHTML = '<div class="verdict" style="--c:' + t[0] + '"><strong>' + esc(t[1]) + "</strong><p>" + esc(t[2]) + "</p></div>" +
+      (st.pj === "oui" ? '<div class="note hot">Vous avez indiqué avoir une protection juridique : si elle couvre ces frais, l’aide juridictionnelle n’est pas accordée.</div>' : "") +
+      '<p class="small muted">Estimation selon les plafonds 2026 de la métropole' + (Number(st.foyer) > 7 ? ", majorés de " + eur(SUPP) + " par personne au-delà de sept (les plafonds de patrimoine retenus restent ceux d’un foyer de sept personnes)" : "") + '. La demande se fait par le formulaire officiel, disponible sur service-public.fr, ou en ligne. Seul le bureau d’aide juridictionnelle décide.</p>';
+  }
+
+  /* ---------- Les voies ---------- */
+  function renderWays() {
+    var e = num(st.enjeu), small = e !== null && e <= 5000;
+    var n = $("note-750");
+    if (small) { n.hidden = false; n.innerHTML = "<strong>Votre enjeu ne dépasse pas 5 000 €.</strong> Avant de saisir le tribunal judiciaire pour obtenir le paiement d’une telle somme, il faut en principe avoir tenté une conciliation, une médiation ou une procédure participative (art. 750-1 CPC). La conciliation, la médiation et la procédure participative ne sont donc pas seulement moins chères : l’une d’elles est souvent un passage obligé."; }
+    else n.hidden = true;
+    var W = [
+      { t: "Le dialogue direct", c: "var(--ok)", ct: "Gratuit", li: ["Un échange, un courrier, une proposition écrite.", "Coût : votre temps. Un accord peut être mis par écrit et signé par les deux parties."], src: [] },
+      { t: "Le conciliateur de justice", c: "var(--ok)", ct: "Gratuit", li: ["Un bénévole, désigné par la justice, reçoit les deux parties et les aide à trouver un accord.", "On le contacte auprès du tribunal ou lors de ses permanences, souvent tenues en mairie. L’accord peut être constaté par écrit, puis homologué par le juge pour devenir exécutoire."], src: ["conc"] },
+      { t: "La médiation", c: "var(--mid)", ct: "Payante, souvent partagée", li: ["Un médiateur indépendant aide les parties à construire leur propre solution.", "Sa rémunération est fixée librement, et le plus souvent partagée entre les parties. Votre protection juridique peut la prendre en charge."], src: ["pj"] },
+      { t: "La procédure participative", c: "var(--mid)", ct: "Honoraires d’avocats", li: ["Chaque partie, assistée de son avocat, s’engage par écrit à rechercher une solution amiable.", "Coût : les honoraires de votre avocat, fixés par une convention écrite. En cas d’échec, le travail fait sert pour la suite."], src: ["hon"] },
+      { t: "Le tribunal", c: "var(--hot)", ct: "Le plus coûteux", li: [
+          "Contribution pour l’aide juridique : 50 €, due par celui qui saisit le tribunal judiciaire, sauf aide juridictionnelle ou injonction de payer.",
+          "Honoraires d’avocat, librement fixés par une convention écrite, et frais de commissaire de justice (assignation, signification, exécution).",
+          "Si vous perdez : les dépens de l’autre partie, et la somme que le juge peut vous condamner à lui verser pour ses frais (art. 700).",
+          "Si vous gagnez : le juge met en principe les dépens à la charge de l’autre et peut lui faire payer une partie de vos frais. Le montant est fixé en équité : il ne couvre pas toujours l’intégralité de vos honoraires.",
+          "Et la durée : plusieurs mois, souvent davantage, avant une décision, puis son exécution."], src: ["cgi", "dep", "a696", "a700"] }
+    ];
+    if (st.sens === "reclame") W.splice(4, 0, { t: "L’injonction de payer", c: "var(--mid)", ct: "Frais réduits", li: ["Pour une créance d’argent certaine : vous demandez au juge, sans audience, d’ordonner le paiement.", "Pas de contribution de 50 €. Si le débiteur forme opposition, l’affaire est rejugée avec un débat."], src: ["cgi"] });
+    $("ways").innerHTML = W.map(function (w) {
+      return '<div class="way"><header><h3>' + esc(w.t) + '</h3><span class="cost" style="--c:' + w.c + '">' + esc(w.ct) + "</span></header><ul>" + w.li.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") + "</ul>" +
+        (w.src.length ? '<p class="src" style="margin:6px 0 0">' + w.src.map(function (k) { return '<a href="' + REF[k][1] + '" target="_blank" rel="noopener">' + esc(REF[k][0]) + "</a>"; }).join(" · ") + "</p>" : "") + "</div>";
+    }).join("");
+  }
+
+  /* ---------- Balance ---------- */
+  function balance() {
+    var e = num(st.enjeu), f = num(st.frais), r = num(st.risque), h = num(st.heures);
+    if (e === null || f === null) return null;
+    return { e: e, f: f, r: r, h: h, best: e - f, worst: -(f + (r || 0)), ratio: e > 0 ? f / e : null };
+  }
+  function balHTML(b) {
+    if (!b) return '<p class="small muted">Saisissez au moins la somme en jeu (étape 1) et ce que la procédure vous coûterait pour voir la balance.</p>';
+    var max = Math.max(b.e, b.f + (b.r || 0), 1);
+    function row(lbl, v, c) { return '<div class="bal-row"><span>' + lbl + '</span><div class="track"><i style="width:' + Math.max(2, v / max * 100).toFixed(1) + "%;--c:" + c + '"></i></div><b>' + eur(v) + "</b></div>"; }
+    var reclame = st.sens !== "reclamee";
+    var h = '<div class="panel balance">' + row(reclame ? "En jeu" : "On me réclame", b.e, "var(--navy)") + row("Ce que j’engage", b.f, "var(--gold)") + (b.r ? row("Ce que je risque en plus", b.r, "var(--hot)") : "") + "</div>";
+    h += '<div class="panel"><p class="kicker" style="margin-bottom:4px">Pour 100 € en jeu</p><p class="big-num">' + (b.ratio === null ? "—" : Math.round(b.ratio * 100) + " € de frais") + "</p>" +
+      '<p class="small muted" style="margin:0">' + (b.ratio === null ? "" : b.ratio >= 0.5 ? "Les frais absorberaient une grande part de l’enjeu. Une voie amiable, ou un compromis, protège mieux vos intérêts." : b.ratio >= 0.2 ? "Les frais pèsent nettement sur l’enjeu. Comparez avec ce qu’un accord vous permettrait d’obtenir dès maintenant." : "Les frais restent modestes au regard de l’enjeu. Reste le temps, la durée et l’incertitude du résultat.") + "</p></div>";
+    h += '<div class="panel"><p style="margin:0 0 6px"><strong>Si l’issue m’est favorable :</strong> il me resterait au mieux ' + eur(b.best) + ", avant ce que le juge pourrait me faire rembourser de mes frais.</p>" +
+      "<p style=\"margin:0\"><strong>Si l’issue m’est défavorable :</strong> " + (reclame ? "je n’obtiens rien et " : "je dois payer ce qui m’est réclamé, et ") + "je perds " + eur(-b.worst) + " de frais" + (b.r ? ", dépens et indemnité de l’autre compris" : "") + ".</p>" +
+      (b.h ? '<p class="small muted" style="margin:8px 0 0">Sans compter ' + Math.round(b.h) + " heures de votre temps.</p>" : "") + "</div>";
+    return h;
+  }
+  function renderBal() { $("bal-out").innerHTML = balHTML(balance()); }
+
+  /* ---------- Synthèse ---------- */
+  function renderSum() {
+    $("sum-date").textContent = "Établie le " + new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) + ".";
+    var e = num(st.enjeu), r = ajResult(), t = ajText(r);
+    var rows = [
+      ["Dans ce conflit", st.sens === "reclame" ? "Je réclame" : st.sens === "reclamee" ? "On me réclame" : "Non précisé"],
+      ["Somme en jeu", e === null ? "Non précisée" : eur(e)],
+      ["Protection juridique", { oui: "Oui : déclarer le litige à l’assureur", non: "Non", nsp: "À vérifier dans mes contrats" }[st.pj] || "Non précisé"],
+      ["Aide juridictionnelle", t ? t[1] : "Non estimée"],
+      ["Tentative amiable préalable", e !== null && e <= 5000 ? "En principe obligatoire avant le tribunal (art. 750-1 CPC)" : "Recommandée, et gratuite avec un conciliateur"]
+    ];
+    $("sum-dl").innerHTML = rows.map(function (x) { return "<dt>" + esc(x[0]) + "</dt><dd>" + esc(x[1]) + "</dd>"; }).join("");
+    $("sum-bal").innerHTML = balHTML(balance());
+    var q = [];
+    if (st.pj !== "non") q.push("À mon assureur : mon contrat couvre-t-il ce litige, jusqu’à quel plafond, et prend-il en charge une médiation ?");
+    q.push("À l’avocat : quel est le montant ou le mode de calcul de vos honoraires (forfait, temps passé, honoraire de résultat) ? Pouvez-vous me remettre une convention d’honoraires écrite ?");
+    q.push("Quelles sont mes chances raisonnables, et combien de temps la procédure prendrait-elle ?");
+    q.push("Quelle solution amiable pourrais-je proposer dès maintenant, et à quel prix ?");
+    if (r && (r.niv === "totale" || r.niv === "55" || r.niv === "25")) q.push("Comment déposer ma demande d’aide juridictionnelle, et l’avocat accepte-t-il d’intervenir à ce titre ?");
+    $("sum-q").innerHTML = q.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("");
+    var keys = ["aj2", "aj4", "circ", "pj", "conc", "a7501", "cgi", "hon", "dep", "a696", "a700"];
+    $("sum-law").innerHTML = keys.map(function (k) { var x = REF[k]; return '<div class="law"><p>' + esc(x[2]) + '</p><a href="' + x[1] + '" target="_blank" rel="noopener">' + esc(x[0]) + "</a></div>"; }).join("") + '<p class="small muted" style="margin:10px 0 0">' + VERIF + "</p>";
+    var links = [];
+    if (LIENS.cap) links.push('<a href="' + LIENS.cap + '">Le Cap</a> pour voir les étapes d’une procédure');
+    if (LIENS.vigie) links.push('<a href="' + LIENS.vigie + '">La Vigie</a> pour situer où en est le conflit');
+    $("sum-links").innerHTML = links.length ? "Pour aller plus loin : " + links.join(" · ") + "." : "";
+    $("sum-links").hidden = !links.length;
+  }
+  $("btn-print").onclick = function () { window.print(); };
+  $("btn-erase").onclick = function () { if (!this.dataset.armed) { var self = this; self.dataset.armed = "1"; self.dataset.label = self.textContent; self.textContent = "Cliquez à nouveau pour tout effacer"; setTimeout(function () { if (self.dataset.armed) { delete self.dataset.armed; self.textContent = self.dataset.label; } }, 5000); return; } delete this.dataset.armed; setTimeout(function () { try { localStorage.removeItem(KEY); } catch (e) {} }, 0);
+    
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    st = { sens: "", enjeu: "", pj: "", foyer: "1", rfr: "", mob: "", immo: "", frais: "", risque: "", heures: "", screen: "intro", done: false };
+    syncInputs(); $("btn-last").hidden = true; show("intro"); this.textContent = "Données effacées";
+  };
+  function openMentions() { if (location.hash === "#mentions-legales") $("mentions-legales").open = true; }
+  window.addEventListener("hashchange", openMentions);
+
+  window.__aune = { aj: aj };
+
+  load(); syncInputs(); openMentions();
+  $("btn-last").hidden = !st.done;
+  show("intro", true);
+})();
+</script>
+</body>
+</html>
